@@ -8,6 +8,11 @@ Passage Plan Singapore · MT TITANIA. Offline PWA for building in-port passage p
 
 Live: https://sailor-90.github.io/singapore-passage-plan/ (GitHub Pages, public repo).
 
+## Sebelum mengubah kode
+
+- Baca graphify-out/GRAPH_REPORT.md dulu untuk memahami struktur proyek. Folder itu hanya ada di komputer ini dan tidak ikut git; kalau tidak ada atau usang, jalankan /graphify dulu.
+- Setelah perubahan yang menambah atau mengubah fungsi, fitur, atau file, dan hasilnya sudah dicek serta di-commit, jalankan /graphify . --update atau ingatkan user.
+
 ## Commands
 
 No build, lint or test tooling (no package.json). Serve the folder statically and check in a browser:
@@ -64,4 +69,4 @@ Other files: `sw.js` (service worker, network-first with cache fallback so it wo
 
 - Public repo `sailor-90/singapore-passage-plan`. Claude commits locally; the user pushes with GitHub Desktop (Claude has no GitHub credentials).
 - Commits must be authored as `sailor-90 <333464309+sailor-90@users.noreply.github.com>`. GitHub rejects the user's real Gmail (private email). After every commit, check `git log --format='%an <%ae>' -1` before telling the user to push.
-- Local-only paths excluded via `.git/info/exclude` (never commit or push): `graphify-out/`, `referensi/`, `.claude/launch.json`, `.DS_Store`.
+- Local-only paths listed in `.gitignore` (and `.git/info/exclude`); never commit or push: `graphify-out/`, `referensi/`, `.claude/launch.json`, `.DS_Store`.

@@ -1,0 +1,5 @@
+# Hanya di komputer ini, jangan ikut git
+graphify-out/
+.DS_Store
+referensi/
+.claude/launch.json
