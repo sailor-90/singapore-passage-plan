@@ -3,10 +3,10 @@
 <meta name="theme-color" content="#0E3A5B"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Passage Plan SG">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--acc:#0E3A5B;--pri:#C9711B;--card:#fff;--ink:#12263A;--mut:#5A6B7C;--line:#C9D4DE;--bg:#EEF2F5;--auto:#E6EEF5;--tabh:64px}
+:root{--acc:#0E3A5B;--pri:#C9711B;--card:#fff;--ink:#12263A;--mut:#5A6B7C;--line:#C9D4DE;--bg:#EEF2F5;--auto:#E6EEF5;--tabh:44px}
 *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);-webkit-text-size-adjust:100%}
 input,select,button,textarea{font:inherit;color:inherit}
-#app{position:fixed;left:0;right:0;top:0;bottom:calc(var(--tabh) + env(safe-area-inset-bottom))}
+#app{position:fixed;left:0;right:0;top:0;bottom:calc(var(--tabh) + env(safe-area-inset-bottom)*.45)}
 .page{position:absolute;inset:0;display:none;flex-direction:column;overflow:hidden}
 .page.on{display:flex}
 .ph{background:var(--acc);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 20px 12px}
@@ -52,8 +52,9 @@ input,select,button,textarea{font:inherit;color:inherit}
 .ins{height:34px;border-radius:8px;border:1px dashed #9FB2C4;background:transparent;color:#24435E;font-size:13px;cursor:pointer;width:100%}
 .warn{background:#FFF3CD;color:#6B4700;border:1px solid #F0C36D;border-radius:12px;padding:12px;font-size:14px}
 details.card summary{font-weight:600;cursor:pointer}details.card ol{margin:6px 0 0 18px;padding:0;font-size:13px;line-height:1.4;color:#3A4D60}
-#tabs{position:fixed;left:0;right:0;bottom:0;height:calc(var(--tabh) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border-top:1px solid #D5DEE6;z-index:20}
-#tabs button{border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:12px;color:var(--mut);cursor:pointer}
+#tabs{position:fixed;left:0;right:0;bottom:0;height:calc(var(--tabh) + env(safe-area-inset-bottom)*.45);padding-bottom:calc(env(safe-area-inset-bottom)*.45);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#fff;border-top:1px solid #D5DEE6;z-index:20}
+#tabs button{border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 0 4px;font-size:11px;letter-spacing:.02em;color:var(--mut);cursor:pointer}
+#tabs button svg{width:20px;height:20px}
 #tabs button.on{color:var(--pri);font-weight:600}
 .sheetBg{position:fixed;inset:0;background:rgba(8,20,32,.55);z-index:50;display:flex;align-items:flex-end;justify-content:center}
 .sheetIn{background:#fff;width:100%;max-width:560px;max-height:88%;overflow-y:auto;border-radius:16px 16px 0 0;padding:18px 16px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:10px}

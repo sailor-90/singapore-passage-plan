@@ -1,5 +1,5 @@
 // Naikkan VERSION setiap ada file yang berubah, supaya HP mengambil versi baru.
-const VERSION = "passage-plan-sg-v15";
+const VERSION = "passage-plan-sg-v16";
 const FILES = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
